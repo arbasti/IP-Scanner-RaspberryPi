@@ -1,7 +1,7 @@
 # IP-Scanner-RaspberryPi
 
 ## Objectif :
-- Détecter les utilisateurs connecté à un wifi depuis sur un Raspberry Pi 3
+- Détecter les utilisateurs connecté à un wifi depuis un Raspberry Pi 3
 - Ajouter dans une base de donnée :
   - Les différents utilisateurs
   - Leurs nombres de connections
