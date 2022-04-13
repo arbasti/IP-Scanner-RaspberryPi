@@ -12,3 +12,6 @@ Les fichiers de la base de donnée seront stocker sous un **.json**
 
 ## Logiciel :
 - Angry IP Scanner
+
+## MVP :
+Afficher la liste des utilisateurs connectés au réseau
