@@ -11,7 +11,7 @@ Sources :
 - https://docs.python.org/3/library/socket.html
 """
 
-import socket
+import socket  # voir source
 
 # On ping les adresses IP disponibles
 for ping in range(1,254):  # 0 et 255 étant le routeur et le broadcast ne sont pas compris
