@@ -15,3 +15,4 @@ Les fichiers de la base de donnée seront stocker sous un **.json**
 
 ## MVP :
 Afficher la liste des utilisateurs connectés au réseau
+Ajouter la le programme dans un RP puis l'automatiser avec des timers
