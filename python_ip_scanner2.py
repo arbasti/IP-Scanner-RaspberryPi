@@ -1,17 +1,22 @@
 import subprocess
 import re
 
-first_ip = input("Entré l'adresse de début = ")  # 192.168.1.1
-last_ip = input("Entré l'adresse de fin = ")
+first_ip = input("Entrez l'adresse de début = ")  # 192.168.1.1
+last_ip = input("Entrez l'adresse de fin = ")
+adresse_ip_connected = []
 
 def get_Host(x):
+    """
+    Pour départager 3 premiers octets dans la variable Network
+    Du dernier octet dans la variable first_Host (ou last_Host)
+    """
     dot_Counter = 0
     pos_Counter = 0
     for i in x:
         if i == ".":
             dot_Counter += 1
         if dot_Counter == 3:
-            return (x[0:pos_Counter + 1], x[pos_Counter + 1: ])
+            return (x[0:pos_Counter + 1], x[pos_Counter + 1:])
             break
         pos_Counter += 1
 
@@ -30,16 +35,17 @@ counter = 0
 for i in range(int(first_Host), int(last_Host) + 1):
     Process = subprocess.getoutput("ping -n 1 " + Network + str(i))  # Pour faire une seule fois appelle à ping
     empty_String += Process
-    
+
     string_Needed = re.compile(r"TTL=")
-    mo = string_Needed.search(empty_String)
-    
+    mo = string_Needed.search(empty_String)  # On recherche "TTL=" dans la recherche
+
     try:
-        if mo.group() == "TTL=":
-            print("Host " + Network + str(i) + " is UP")
-    except:
-        print("Host " + Network + str(i) + " is Down")
-        
+        if mo.group() == "TTL=":  # Si "TTL=" est présent
+            print("Host " + Network + str(i) + " répond")
+            adresse_ip_connected.append(Network + str(i))
+    except:  # Si "TTL=" n'y est pas
+        print("Host " + Network + str(i) + " ne répond pas")
+
     empty_String = ""
 
-print("Completed")
+print("Fini")
