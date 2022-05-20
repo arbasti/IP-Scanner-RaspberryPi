@@ -7,6 +7,10 @@
   - Leurs nombres de connections
   - Leurs heures de connections
 
+## Module :
+- subprocess
+- re (natif)
+
 ## Base de Donnée :
 Les fichiers de la base de donnée seront stocker sous un **.json**
 
