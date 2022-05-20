@@ -3,7 +3,7 @@ import re
 
 first_ip = input("Entrez l'adresse de début = ")  # 192.168.1.1
 last_ip = input("Entrez l'adresse de fin = ")
-adresse_ip_connected = []
+adresse_ip_connected = []  # la liste des adresses ip connectés au réseau
 
 def get_Host(x):
     """
