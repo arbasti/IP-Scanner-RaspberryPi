@@ -8,8 +8,10 @@
   - Leurs heures de connections
 
 ## Module :
-- subprocess
-- re (natif)
+```python
+import subprocess
+import re
+```
 
 ## Base de Donnée :
 Les fichiers de la base de donnée seront stocker sous un **.json**
